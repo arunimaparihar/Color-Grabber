@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.popup{
+    width: 350px;
+    background: #fff;
+}
+.popup :where(.picker,header,.all-colour){
+    display: flex;
+    align-items: center;
+}
+.popup .picker{
+    padding: 30px 0;
+    
+    justify-content: center;
+    background: #e3f2fd;
+}
+.picker #colour-picker{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to left,#e43516,#d8ee4b,#3e9f1b,#33b0c9,#532deb,#c622be,#dc1d23);
+    background-size: 200%;
+    transition: 0.6s;
+}
+.picker #colour-picker:hover{
+background-position: right;
+}
+.picked-colour{
+    margin: 10px 15px;
+}
+.picked-colour header{
+    justify-content: space-between;
+}
+header .title{
+    font-size: 1rem;
+}
+
+.picked-colour .clearall{
+color: #5372f0;
+cursor:pointer;
+font-size: 0.9rem;
+}
+.picked-colour.hide{
+    display: none;
+}
+.picked-colour .all-colour{
+margin:10px 0 15px;
+flex-wrap: wrap;
+list-style: none;
+}
+.all-colour .colour{
+cursor: pointer;
+margin-bottom: 10px;
+width: calc(100%/3);
+}
+.all-colour .colour .rect{
+    display:block;
+    height: 22px;
+    width: 22px;
+    margin-right: 8px;
+    border-radius: 5px;
+    background: #5372f0;
+}
+.all-colour .colour .value{
+    font-size:0.96rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
